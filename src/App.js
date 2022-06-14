@@ -4,7 +4,7 @@ import CardsWrapper from "./components/CardsWrapper";
 function App() {
   return (
     <div className="App">
-      <CardsWrapper />
+      <CardsWrapper cardsNumber="5" />
       <button onClick={() => window.location.reload()}>Reload Card</button>
     </div>
   );

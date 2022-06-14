@@ -1,8 +1,8 @@
 import Card from "./Card";
 import { numbers, colors, symbols } from "../data";
 
-const CardsWrapper = () => {
-  const cardNumbers = 5;
+const CardsWrapper = ({ cardsNumber }) => {
+  const cardNumbers = cardsNumber;
 
   let alreadyDone = [];
   const randomValueFromArray = (myArray) => {

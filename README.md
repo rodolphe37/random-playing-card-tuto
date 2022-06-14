@@ -2,7 +2,7 @@
 
 ---
 
-# Repo for "Random playing cards with React js Tutorial
+# Repo for "Random playing cards with React js Tutorial"
 
 > This repo is **_source code for the medium article tutorial_** &
 > the code is **_open sources_**!
