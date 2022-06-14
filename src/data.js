@@ -39,6 +39,18 @@ export const numbers = [
     id: 9,
     number: 10,
   },
+  {
+    id: 10,
+    number: 11,
+  },
+  {
+    id: 11,
+    number: 12,
+  },
+  {
+    id: 12,
+    number: 13,
+  },
 ];
 
 export const colors = [
@@ -66,13 +78,13 @@ export const symbols = [
     color: "red",
   },
   {
-    id: 0,
+    id: 2,
     symbol: "♣",
     name: "club",
     color: "black",
   },
   {
-    id: 0,
+    id: 3,
     symbol: "♦",
     name: "diamond",
     color: "red",

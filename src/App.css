@@ -136,7 +136,7 @@
 }
 .grid-7 .centerCard:last-child {
   position: absolute;
-  transform: translate(5rem, -2rem);
+  transform: translate(80px, -20px);
 }
 .grid-8 {
   transform: scale(0.9) translate(0, -3.4rem);
@@ -146,6 +146,8 @@
 }
 .grid-10 {
   transform: scale(0.9) translate(0, -2.7rem);
+  grid-row-gap: 0px;
+  grid-column-gap: 34px;
 }
 
 .grid-9 .centerCard:last-child {
@@ -159,7 +161,7 @@
 }
 .grid-10 .centerCard:nth-child(9) {
   position: absolute;
-  transform: translate(5rem, 4rem);
+  transform: translate(79px, 137px);
 }
 button {
   background: none;
@@ -176,4 +178,7 @@ button {
 button:hover {
   background-color: #fff;
   color: #444;
+}
+.figure-picture {
+  transform: scale(0.94) translate(0, 10px);
 }

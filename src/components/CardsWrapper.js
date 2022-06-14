@@ -23,6 +23,7 @@ const CardsWrapper = ({ cardsNumber }) => {
         index += 1;
         const randomSymbols =
           symbols[Math.floor(Math.random() * symbols.length)];
+
         return (
           <Card
             key={index}
