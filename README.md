@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+#
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+# Repo for "Random playing cards with React js
 
-In the project directory, you can run:
+> This repo is **_source code for the medium article tutorial_** &
+> the code is **_open sources_**!
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## :computer: Online Demo
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**You can test this app** **[here](https://random-playing-card-react.netlify.app/)**
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Gif demo
 
-### `npm run build`
+<img  style =" margin-top: 5px; margin-right: 22px " src="demo/random-card-tuto.gif" alt="drawing" height="100%" width="100%"/>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## :bust_in_silhouette: Author
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Thought, designed and developed with :purple_heart: by Rodolphe Augusto
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## :large_blue_diamond: A few words from the author
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Enjoy the World :smirk:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## :scroll: License
 
-## Learn More
+MIT
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## My other projects:
 
-### Code Splitting
+> ### My Simple Tutorial Creator
+>
+> https://github.com/rodolphe37/my-simple-tutorial-creator
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+> ### My Simple Task Manager
+>
+> https://github.com/rodolphe37/my-simple-tasks-manager-
 
-### Analyzing the Bundle Size
+> ### My Simple Cam
+>
+> https://github.com/rodolphe37/my-simple-cam-dektop-app
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+> ### App for decrypt greenPass europe QRcode
+>
+> https://github.com/rodolphe37/qrcode-decoder
 
-### Making a Progressive Web App
+> ### Css animation with Create React App base.
+>
+> https://github.com/rodolphe37/halloween2021-bat-tuto-youtube-video
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+> ### My GitHub "open Sources" project
+>
+> https://github.com/rodolphe37/pwa-react-project
 
-### Advanced Configuration
+> ### cra-template-github-my-profile
+>
+> https://github.com/rodolphe37/cra-template-github-my-profile
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+> ### My Awesome Custom Alert
+>
+> https://github.com/rodolphe37/my-awesome-custom-alert
 
-### Deployment
+> ### Geolocation starter app React-native
+>
+> https://github.com/rodolphe37/react-native_geolocation-tracker
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+> ### Classic React Ultimate Messenger version repository (for open sources contributors)
+>
+> https://github.com/rodolphe37/rum-open-sources
 
-### `npm run build` fails to minify
+> ### React Ultimate Messenger template for React (create-react-app tools)
+>
+> https://github.com/rodolphe37/cra-react-ultimate-messenger
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+> ### PWA React Ultimate Messenger template for React (create-react-app tools)
+>
+> https://github.com/rodolphe37/cra-pwa-react-ultimate-messenger
+
+> ### installation and initialization shell script for the PWA React Ultimate Messenger template
+>
+> https://github.com/rodolphe37/pwa-rum-install-pack
+
+> ### Upload-image-profil-component
+>
+> https://github.com/rodolphe37/Upload-image-profil-component
+
+> ### Jeux libres de droits "open Sources" - Memory Yoga Cards Game - Sort the Waste Game - Match 3 Yoga Game - Tetris Classic Game - Remake Earth Puzzle Game
+>
+> https://github.com/rodolphe37/install-games-repository
+
+> ### Administration template - React JS & react-admin
+>
+> https://github.com/rodolphe37/nfc-updates-front
+
+> ### Administration template Backend - Node & Express
+>
+> https://github.com/rodolphe37/nfc-updates-back
+
+---
