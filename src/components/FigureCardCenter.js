@@ -12,7 +12,7 @@ import QueenOfHeart from "./figureComponents/QueenOfHeart";
 import QueenOfSpade from "./figureComponents/QueenOfSpade";
 
 const FigureCardCenter = ({ name, number }) => {
-  const JackContent = () => {
+  const FigureContent = () => {
     switch (number) {
       case 11:
         if (name === "spade") {
@@ -63,7 +63,7 @@ const FigureCardCenter = ({ name, number }) => {
 
   return (
     <div className="figure-picture">
-      <JackContent />
+      <FigureContent />
     </div>
   );
 };
