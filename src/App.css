@@ -1,8 +1,11 @@
+/* RESET CSS  */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
+/* GLOBALS  STYLE */
 .App {
   display: flex;
   align-items: center;
@@ -13,15 +16,16 @@
   background-color: #282c34;
   flex-wrap: wrap;
 }
+
+.App-link {
+  color: #61dafb;
+}
+/* CARD STYLE */
 .card-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 .card-container {
@@ -69,22 +73,25 @@
   text-align: center;
   width: 100%;
 }
-.top-symbol {
+
+.top-symbol,
+.bottom-symbol {
   display: flex;
-  align-items: flex-start;
   justify-content: space-evenly;
   flex-direction: column;
 }
+
+.top-symbol {
+  align-items: flex-start;
+}
 .bottom-symbol {
-  display: flex;
   align-items: flex-end;
-  justify-content: space-evenly;
-  flex-direction: column;
 }
 .center-symbol-sigle {
   font-size: 72px;
 }
 
+/* DYNAMIC COLOR CLASS SECTION */
 .red {
   color: red;
 }
@@ -92,6 +99,7 @@
   color: black;
 }
 
+/* DYNAMIC CENTER CARD SECTION */
 .grid-3,
 .grid-2 {
   display: flex;
@@ -163,6 +171,11 @@
   position: absolute;
   transform: translate(79px, 137px);
 }
+.figure-picture {
+  transform: scale(0.94) translate(0, 10px);
+}
+
+/* BUTTON SECTION */
 button {
   background: none;
   border: 1px solid #fff;
@@ -178,7 +191,4 @@ button {
 button:hover {
   background-color: #fff;
   color: #444;
-}
-.figure-picture {
-  transform: scale(0.94) translate(0, 10px);
 }
