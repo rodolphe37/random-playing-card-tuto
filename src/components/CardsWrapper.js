@@ -1,25 +1,14 @@
 import Card from "./Card";
 import { numbers, colors, symbols } from "../data";
+import useRandomValueFromArray from "../hooks/useRandomValueFromArray";
 
 const CardsWrapper = ({ cardsNumber }) => {
   const cardNumbers = cardsNumber;
-
-  let alreadyDone = [];
-  const randomValueFromArray = (myArray) => {
-    if (alreadyDone.length === 0) {
-      for (let i = 0; i < myArray.length; i++) alreadyDone.push(i);
-    }
-    let randomValueIndex = Math.floor(Math.random() * alreadyDone.length);
-    let indexOfItemInMyArray = alreadyDone[randomValueIndex];
-
-    alreadyDone.splice(randomValueIndex, 1);
-
-    return myArray[indexOfItemInMyArray];
-  };
+  const { randomValueFromArray } = useRandomValueFromArray();
 
   return (
     <div className="card-wrapper">
-      {[...Array(Number(cardNumbers))].map((numb, index) => {
+      {[...Array(Number(cardNumbers))].map((_numb, index) => {
         index += 1;
         const randomSymbols =
           symbols[Math.floor(Math.random() * symbols.length)];

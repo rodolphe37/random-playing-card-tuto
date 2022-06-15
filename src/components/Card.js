@@ -1,5 +1,5 @@
 import BorderCardFigureConditions from "./BorderCardFigureConditions";
-import FigureCardCenter from "./FigureCardCenter";
+import CenterCardElement from "./CenterCardElement";
 
 const Card = ({ number, color, symbol, name }) => {
   return (
@@ -13,19 +13,7 @@ const Card = ({ number, color, symbol, name }) => {
           <div />
         </div>
         <div className={`card-content-inner__center grid-${number} ${color}`}>
-          {[...Array(Number(number))].map((symb, index) => {
-            index += 1;
-            return (
-              <span className="centerCard" key={index}>
-                <span name={symb} className="center-symbol-sigle">
-                  {number >= 0 && number <= 10 ? symbol : null}
-                </span>
-              </span>
-            );
-          })}
-          {number === 11 || number === 12 || number === 13 ? (
-            <FigureCardCenter number={number} name={name} />
-          ) : null}
+          <CenterCardElement number={number} symbol={symbol} name={name} />
         </div>
         <div className={`card-content-inner__border-bottom ${color}`}>
           <div />
