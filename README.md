@@ -7,6 +7,8 @@
 > This repo is **_source code for the medium article tutorial_** &
 > the code is **_open sources_**!
 
+**The link to the Medium article: [here](https://medium.com/@rodolphe.a_97435/react-js-tutorial-how-to-implement-a-shuffle-card-game-from-scratch-c994277d38b3)**
+
 ---
 
 ## :computer: Online Demo
