@@ -5,9 +5,7 @@ const CumulatorComponent = ({ scoreArray }) => {
 
   useEffect(() => {
     const cumulScore = scoreArray.reduce((accum, item) => accum + item, 0);
-    if (cumulScore !== 0) {
-      setScoreFinal(cumulScore);
-    }
+    setScoreFinal(cumulScore);
     console.log("cumul", cumulScore);
   }, [setScoreFinal, scoreArray]);
 

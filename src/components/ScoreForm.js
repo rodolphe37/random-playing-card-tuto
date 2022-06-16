@@ -9,7 +9,7 @@ const ScoreForm = ({ scoreArray }) => {
     useFlagByCountry();
   const { classmentFinal } = useCumulatorController({ scoreArray });
 
-  console.log("clss", classmentFinal?.pts);
+  console.log("clss", classmentFinal.pts);
 
   return (
     <div className="infos">
@@ -50,14 +50,14 @@ const ScoreForm = ({ scoreArray }) => {
             style={name !== "" && country !== "" ? { height: "15vh" } : {}}
           >
             <div className="header-score-content">Score :</div>
-            <div className="score-innercontent">{`${classmentFinal?.pts}pts`}</div>
+            <div className="score-innercontent">{`${classmentFinal.pts}pts`}</div>
           </div>
         </div>
       ) : (
         <div className="bottomFormSection">
           <div className="ScoreSection">
             <div className="header-score-content">Score :</div>
-            <div className="score-innercontent">{`${classmentFinal?.pts}pts`}</div>
+            <div className="score-innercontent">{`${classmentFinal.pts}pts`}</div>
           </div>
         </div>
       )}
@@ -66,7 +66,7 @@ const ScoreForm = ({ scoreArray }) => {
         <button
           onClick={() =>
             alert(
-              `Your NickName is :${name}, Your Country is: ${country}, and your score is:${classmentFinal.pts}pts`
+              `Your NickName is :${name}, Your Country is: ${country}, and your score is:${classmentFinal}pts`
             )
           }
           className="SendingButton"

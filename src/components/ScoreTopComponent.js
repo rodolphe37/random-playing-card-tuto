@@ -1,19 +1,9 @@
-import { useEffect, useState } from "react";
 import useCumulatorController from "../hooks/useCumulatorController";
 
 const ScoreTopComponent = ({ scoreArray }) => {
   const { numberOfReload, classmentFinal } = useCumulatorController({
     scoreArray,
   });
-  const [ptsForEachReload, setPtsForEachRelaod] = useState();
-
-  useEffect(() => {
-    const { pts } = classmentFinal;
-    if (classmentFinal && pts !== 0) {
-      setPtsForEachRelaod(pts);
-    }
-    console.log("pts", pts);
-  }, [classmentFinal]);
   return (
     <span
       style={{
@@ -26,7 +16,7 @@ const ScoreTopComponent = ({ scoreArray }) => {
         marginBottom: "5rem",
       }}
     >
-      <span>Total score: {ptsForEachReload}Pts</span>
+      <span>Total score: {classmentFinal.pts}Pts</span>
       <p style={{ color: numberOfReload === 3 ? "red" : "white" }}>
         Reloads: {numberOfReload}/4
       </p>
