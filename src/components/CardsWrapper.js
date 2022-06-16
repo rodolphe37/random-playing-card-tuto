@@ -13,12 +13,18 @@ const CardsWrapper = ({ cardsNumber, scoreArray, numberOfReload }) => {
 
   useEffect(() => {
     console.log("scoreArray", scoreArray);
-    console.log("number of session", +1);
-  }, [scoreArray, numberOfReload]);
+  }, [scoreArray]);
 
   return (
     <>
-      <CumulatorComponent scoreArray={scoreArray} />
+      <div
+        className={`card-wrapper ${
+          numberOfReload === 3 ? "scale-out-center" : ""
+        }`}
+      >
+        <CumulatorComponent scoreArray={scoreArray} />
+      </div>
+
       <div
         className={`modal-form ${
           numberOfReload === 3 ? "scale-in-center" : "hidden"

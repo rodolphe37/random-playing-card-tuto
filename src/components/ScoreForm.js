@@ -9,8 +9,6 @@ const ScoreForm = ({ scoreArray }) => {
     useFlagByCountry();
   const { classmentFinal } = useCumulatorController({ scoreArray });
 
-  console.log("clss", classmentFinal.pts);
-
   return (
     <div className="infos">
       <span>You must enter your nickName and country for classment scores</span>
