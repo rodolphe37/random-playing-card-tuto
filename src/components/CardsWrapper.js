@@ -13,12 +13,13 @@ const CardsWrapper = ({ cardsNumber, scoreArray, numberOfReload }) => {
 
   useEffect(() => {
     console.log("scoreArray", scoreArray);
-  }, [scoreArray]);
+    console.log("number of session", +1);
+  }, [scoreArray, numberOfReload]);
 
   return (
     <>
       <div
-        className={`card-wrapper ${
+        className={`caculator-container ${
           numberOfReload === 3 ? "scale-out-center" : ""
         }`}
       >
