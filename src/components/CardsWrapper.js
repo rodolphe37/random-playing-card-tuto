@@ -29,6 +29,7 @@ const CardsWrapper = ({ cardsNumber }) => {
           justifyContent: "space-around",
           width: "100%",
           marginTop: "2rem",
+          marginBottom: "5rem",
         }}
       >
         <span>Total score: {classmentFinal.pts}Pts</span>

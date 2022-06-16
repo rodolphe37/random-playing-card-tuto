@@ -82,6 +82,8 @@ function SelectCountry({ country, setCountry }) {
       <option value="Cook Islands">Cook Islands</option>
       <option value="Costa Rica">Costa Rica</option>
       <option value="Cuba">Cuba</option>
+      <option value="Cambodia">Cambodia</option>
+      <option value="Chad">Chad</option>
       <option value="Curaçao">Curaçao</option>
       <option value="Croatia">Croatia</option>
       <option value="Christmas Island">Christmas Island</option>
@@ -104,7 +106,7 @@ function SelectCountry({ country, setCountry }) {
       <option value="Eritrea">Eritrea</option>
       <option value="Western Sahara">Western Sahara</option>
       <option value="Spain">Spain</option>
-
+      <option value="El Salvador">El Salvador</option>
       <option value="Estonia">Estonia</option>
       <option value="Ethiopia">Ethiopia</option>
       <option value="European Union (EU)">European Union (EU)</option>
@@ -150,6 +152,9 @@ function SelectCountry({ country, setCountry }) {
       <option value="Hungary">Hungary</option>
       <option value="Iceland">Iceland</option>
       <option value="India">India</option>
+      <option value="British Indian Ocean Territory">
+        British Indian Ocean Territory
+      </option>
       <option value="Indonesia">Indonesia</option>
       <option value="Iran, Islamic Republic of">
         Iran, Islamic Republic of
@@ -163,7 +168,7 @@ function SelectCountry({ country, setCountry }) {
       <option value="Japan">Japan</option>
       <option value="Jersey">Jersey</option>
       <option value="Jordan">Jordan</option>
-      <option value="Kazakhstan">Kazakhstan</option>
+      <option value="Kazakstan">Kazakstan</option>
       <option value="Kenya">Kenya</option>
       <option value="Kiribati">Kiribati</option>
       <option value="Korea, Democratic People's Republic of">
@@ -187,6 +192,7 @@ function SelectCountry({ country, setCountry }) {
       <option value="Macedonia, The Former Yugoslav Republic of">
         Macedonia, The Former Yugoslav Republic of
       </option>
+      <option value="Marokko">Marokko</option>
       <option value="Madagascar">Madagascar</option>
       <option value="Malawi">Malawi</option>
       <option value="Malaysia">Malaysia</option>
@@ -194,6 +200,7 @@ function SelectCountry({ country, setCountry }) {
       <option value="Mali">Mali</option>
       <option value="Malta">Malta</option>
       <option value="Marshall Islands">Marshall Islands</option>
+      <option value="Makedonia">Makedonia</option>
       <option value="Martinique">Martinique</option>
       <option value="Mauritania">Mauritania</option>
       <option value="Mauritius">Mauritius</option>
@@ -213,6 +220,7 @@ function SelectCountry({ country, setCountry }) {
       <option value="Namibia">Namibia</option>
       <option value="Nauru">Nauru</option>
       <option value="Nepal">Nepal</option>
+      <option value="Mali">Mali</option>
       <option value="Netherlands">Netherlands</option>
       <option value="Netherlands Antilles">Netherlands Antilles</option>
       <option value="New Caledonia">New Caledonia</option>
@@ -244,6 +252,7 @@ function SelectCountry({ country, setCountry }) {
       <option value="Romania">Romania</option>
       <option value="Russian Federation">Russian Federation</option>
       <option value="Rwanda">Rwanda</option>
+      <option value="State of Palestine">State of Palestine</option>
       <option value="Saint Helena">Saint Helena</option>
       <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
       <option value="Saint Lucia">Saint Lucia</option>
@@ -259,6 +268,7 @@ function SelectCountry({ country, setCountry }) {
       <option value="Saudi Arabia">Saudi Arabia</option>
       <option value="Senegal">Senegal</option>
       <option value="Serbia">Serbia</option>
+      <option value="South Sudan">South Sudan</option>
       <option value="Seychelles">Seychelles</option>
       <option value="Sierra Leone">Sierra Leone</option>
       <option value="Singapore">Singapore</option>
@@ -310,6 +320,7 @@ function SelectCountry({ country, setCountry }) {
       <option value="Viet Nam">Viet Nam</option>
       <option value="Virgin Islands, British">Virgin Islands, British</option>
       <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+      <option value="Vietnam">Vietnam</option>
       <option value="Wallis and Futuna">Wallis and Futuna</option>
       <option value="Western Sahara">Western Sahara</option>
       <option value="Yemen">Yemen</option>
