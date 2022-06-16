@@ -48,6 +48,7 @@ const useCumulatorController = ({ scoreArray }) => {
 
   return {
     scoreFinal,
+    setScoreFinal,
     numberOfReload,
     classmentFinal,
   };
