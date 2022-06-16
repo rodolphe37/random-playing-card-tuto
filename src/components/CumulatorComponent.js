@@ -1,12 +1,13 @@
-import { useEffect } from "react";
-import { useSessionStorage } from "../hooks/useSessionStorage";
+import { useEffect, useState } from "react";
 
 const CumulatorComponent = ({ scoreArray }) => {
-  const [scoreFinal, setScoreFinal] = useSessionStorage("score");
+  const [scoreFinal, setScoreFinal] = useState(0);
 
   useEffect(() => {
     const cumulScore = scoreArray.reduce((accum, item) => accum + item, 0);
-    setScoreFinal(cumulScore);
+    if (cumulScore !== 0) {
+      setScoreFinal(cumulScore);
+    }
     console.log("cumul", cumulScore);
   }, [setScoreFinal, scoreArray]);
 

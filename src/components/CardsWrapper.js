@@ -19,7 +19,7 @@ const CardsWrapper = ({ cardsNumber, scoreArray, numberOfReload }) => {
   return (
     <>
       <div
-        className={`caculator-container ${
+        className={`cumulator-wrapper ${
           numberOfReload === 3 ? "scale-out-center" : ""
         }`}
       >
