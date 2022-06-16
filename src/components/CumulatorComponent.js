@@ -1,13 +1,15 @@
-import useCumulatorController from "../hooks/useCumulatorController";
+import { useEffect, useState } from "react";
 
-const Cumulator = ({ scoreArray }) => {
-  const { scoreFinal } = useCumulatorController({ scoreArray });
+const CumulatorComponent = ({ scoreArray }) => {
+  const [scoreFinal, setScoreFinal] = useState(0);
 
-  return scoreFinal !== 0 ? (
-    <span style={{ color: "white", fontSize: 22 }}>
-      Score: {scoreFinal} Pts
-    </span>
-  ) : null;
+  useEffect(() => {
+    const cumulScore = scoreArray.reduce((accum, item) => accum + item, 0);
+    setScoreFinal(cumulScore);
+    console.log("cumul", cumulScore);
+  }, [setScoreFinal, scoreArray]);
+
+  return <span className="CumulScoreEachReload">Score: {scoreFinal} Pts</span>;
 };
 
-export default Cumulator;
+export default CumulatorComponent;

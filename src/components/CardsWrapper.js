@@ -1,54 +1,31 @@
 import Card from "./Card";
 import { numbers, colors, symbols } from "../data";
 import useRandomValueFromArray from "../hooks/useRandomValueFromArray";
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useEffect } from "react";
+
 import CumulatorComponent from "./CumulatorComponent";
-import useCumulatorController from "../hooks/useCumulatorController";
 import ScoreForm from "./ScoreForm";
 
-const CardsWrapper = ({ cardsNumber }) => {
+const CardsWrapper = ({ cardsNumber, scoreArray, numberOfReload }) => {
   const cardNumbers = cardsNumber;
+
   const { randomValueFromArray } = useRandomValueFromArray();
-  const [scoreArray] = useState([]);
-  const { numberOfReload, classmentFinal } = useCumulatorController({
-    scoreArray,
-  });
 
   useEffect(() => {
     console.log("scoreArray", scoreArray);
-    console.log("number of reloads", numberOfReload);
+    console.log("number of session", +1);
   }, [scoreArray, numberOfReload]);
 
   return (
     <>
-      <span
-        style={{
-          color: "white",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-around",
-          width: "100%",
-          marginTop: "2rem",
-          marginBottom: "5rem",
-        }}
-      >
-        <span>Total score: {classmentFinal.pts}Pts</span>
-        <p style={{ color: numberOfReload === 3 ? "red" : "white" }}>
-          Reloads: {numberOfReload}/3
-        </p>
-        <CumulatorComponent scoreArray={scoreArray} />
-      </span>
+      <CumulatorComponent scoreArray={scoreArray} />
       <div
         className={`modal-form ${
           numberOfReload === 3 ? "scale-in-center" : "hidden"
         }`}
       >
-        <ScoreForm
-          classmentFinal={classmentFinal.pts}
-          numberOfReload={numberOfReload}
-        />
+        <ScoreForm scoreArray={scoreArray} numberOfReload={numberOfReload} />
       </div>
-
       <div
         className={`card-wrapper ${
           numberOfReload === 3 ? "scale-out-center" : ""
@@ -80,27 +57,6 @@ const CardsWrapper = ({ cardsNumber }) => {
           );
         })}
       </div>
-      <span
-        style={{
-          width: "100%",
-          marginBottom: "8rem",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-around",
-        }}
-      >
-        <button
-          onClick={() =>
-            numberOfReload < 3
-              ? window.location.reload()
-              : alert(
-                  "the number of retries is reached (3 retries per session)"
-                )
-          }
-        >
-          {numberOfReload === 3 ? "finish for this session" : "Reload Card"}
-        </button>
-      </span>
     </>
   );
 };

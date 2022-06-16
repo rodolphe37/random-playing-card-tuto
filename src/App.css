@@ -7,7 +7,7 @@
 
 /* GLOBALS  STYLE */
 .hidden {
-  display: none;
+  display: none !important;
 }
 .App {
   width: 100%;
@@ -203,6 +203,13 @@ button:hover {
 }
 
 /* MODAL SCORE SECTION */
+.modal-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 100%;
+}
 .modal-form .infos {
   display: flex;
   flex-direction: column;
@@ -210,6 +217,7 @@ button:hover {
   justify-content: space-around;
   background-color: white;
   padding: 4rem;
+  width: 45vw;
 }
 .inputs-container {
   display: flex;
@@ -238,6 +246,7 @@ select {
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .infosResume {
   display: flex;
@@ -279,6 +288,19 @@ select {
   transform: scale(1.1);
   transition: all 0.4s ease-in-out;
 }
+.CumulScoreEachReload {
+  color: white;
+  font-size: 22px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 /* ANIMATIONS */
 .scale-out-center {
   animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
