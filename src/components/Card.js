@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-import useCumulatorController from "../hooks/useCumulatorController";
 import BorderCardFigureConditions from "./BorderCardFigureConditions";
 import CenterCardElement from "./CenterCardElement";
 
@@ -13,14 +12,11 @@ const Card = ({
   cardsNumber,
 }) => {
   const isMounted = useRef(false);
-  const { numberOfReload } = useCumulatorController({
-    scoreArray,
-  });
 
   useEffect(() => {
     console.log("scoreArray", scoreArray);
     // console.log("number of reloads", numberOfReload);
-  }, [scoreArray, numberOfReload]);
+  }, [scoreArray]);
 
   useEffect(() => {
     if (!isMounted) {
