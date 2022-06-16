@@ -4,8 +4,12 @@ import CardsWrapper from "./components/CardsWrapper";
 function App() {
   return (
     <div className="App">
-      <CardsWrapper cardsNumber="5" />
-      <button onClick={() => window.location.reload()}>Reload Card</button>
+      <h1 style={{ textAlign: "center", color: "white" }}>
+        Are you lucky game.
+      </h1>
+      <div className="App__wrapper-container">
+        <CardsWrapper cardsNumber="5" />
+      </div>
     </div>
   );
 }
