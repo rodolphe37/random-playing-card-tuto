@@ -1,15 +1,34 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useRecoilState } from "recoil";
+import { classmentAtom } from "../assets/statesManager/classmentAtom";
 import useCumulatorController from "../hooks/useCumulatorController";
 import useFlagByCountry from "../hooks/useFlagByCountry";
 import SelectCountry from "./SelectCountry";
 
-const ScoreForm = ({ scoreArray }) => {
+const ScoreForm = ({ scoreArray, setScoreSended }) => {
+  let navigate = useNavigate();
+  // eslint-disable-next-line no-unused-vars
+  const [classmentFromState, setClassmentFromState] =
+    useRecoilState(classmentAtom);
   const [name, setName] = useState("");
   const { country, setCountry, setDataCountryCode, dataCountryCode } =
     useFlagByCountry();
   const { classmentFinal } = useCumulatorController({ scoreArray });
 
-  console.log("clss", classmentFinal.pts);
+  useEffect(() => {
+    console.log("class from ScoreForm");
+  }, []);
+
+  const handleReloadGame = () => {
+    setScoreSended(true);
+    setClassmentFromState({ pts: 0, name: "" });
+    alert(
+      `Your NickName is :${name}, Your Country is: ${country}, and your score is:${classmentFinal.pts}pts`
+    );
+    navigate("/");
+    window.location.reload();
+  };
 
   return (
     <div className="infos">
@@ -63,14 +82,7 @@ const ScoreForm = ({ scoreArray }) => {
       )}
       <br />
       <span>
-        <button
-          onClick={() =>
-            alert(
-              `Your NickName is :${name}, Your Country is: ${country}, and your score is:${classmentFinal.pts}pts`
-            )
-          }
-          className="SendingButton"
-        >
+        <button onClick={handleReloadGame} className="SendingButton">
           Send Score.
         </button>
       </span>

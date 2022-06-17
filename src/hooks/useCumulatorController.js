@@ -1,4 +1,4 @@
-import { useCallback, useEffect } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { useSessionStorage } from "./useSessionStorage";
 
 const useCumulatorController = ({ scoreArray }) => {
@@ -8,6 +8,7 @@ const useCumulatorController = ({ scoreArray }) => {
     pts: 0,
     name: "",
   });
+  const isLoading = useRef(false);
 
   const handleClassment = useCallback(() => {
     const cumulScore = scoreArray.reduce((accum, item) => accum + item, 0);
@@ -19,19 +20,22 @@ const useCumulatorController = ({ scoreArray }) => {
   useEffect(() => {
     const cumulScore = scoreArray.reduce((accum, item) => accum + item, 0);
 
-    handleClassment();
-    if (classmentFinal.pts === 0) {
-      setClassmentFinal({
-        ...classmentFinal,
-        pts: cumulScore,
-      });
-    } else {
-      setClassmentFinal({
-        ...classmentFinal,
-        pts: classmentFinal.pts + cumulScore,
-      });
-    }
+    if (cumulScore) {
+      handleClassment();
+      if (classmentFinal.pts === 0) {
+        setClassmentFinal({
+          ...classmentFinal,
+          pts: cumulScore,
+        });
+      } else {
+        setClassmentFinal({
+          ...classmentFinal,
+          pts: classmentFinal.pts + cumulScore,
+        });
+      }
 
+      isLoading.current = false;
+    }
     return () => {
       setNumberOfReload(0);
       setScoreFinal(0);

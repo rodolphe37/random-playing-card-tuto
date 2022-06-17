@@ -6,13 +6,17 @@ import { Fragment, useEffect } from "react";
 import CumulatorComponent from "./CumulatorComponent";
 import ScoreForm from "./ScoreForm";
 
-const CardsWrapper = ({ cardsNumber, scoreArray, numberOfReload }) => {
+const CardsWrapper = ({
+  cardsNumber,
+  scoreArray,
+  numberOfReload,
+  setScoreSended,
+}) => {
   const cardNumbers = cardsNumber;
   const { randomValueFromArray } = useRandomValueFromArray();
 
   useEffect(() => {
     console.log("scoreArray", scoreArray);
-    console.log("number of session", +1);
   }, [scoreArray, numberOfReload]);
 
   return (
@@ -30,7 +34,11 @@ const CardsWrapper = ({ cardsNumber, scoreArray, numberOfReload }) => {
           numberOfReload === 3 ? "scale-in-center" : "hidden"
         }`}
       >
-        <ScoreForm scoreArray={scoreArray} numberOfReload={numberOfReload} />
+        <ScoreForm
+          setScoreSended={setScoreSended}
+          scoreArray={scoreArray}
+          numberOfReload={numberOfReload}
+        />
       </div>
       <div
         className={`card-wrapper ${

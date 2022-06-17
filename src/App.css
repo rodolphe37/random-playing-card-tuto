@@ -14,6 +14,59 @@
   min-height: 100vh;
   background-color: #282c34;
   flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 1rem;
+}
+.App-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 10vh;
+}
+.App-header img:first-child {
+  margin-right: 1rem;
+}
+.App-header img:last-child {
+  margin-left: 1rem;
+}
+.start-page__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+}
+.start-page__container img {
+  filter: drop-shadow(2px 4px 6px grey);
+}
+.start-page__center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 36vh;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  max-width: 60%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid white;
+}
+.rule-list {
+  max-width: 60%;
+
+  line-height: 1.3rem;
+}
+.rules__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .App__wrapper-container {
   display: flex;

@@ -1,5 +1,5 @@
-import { useEffect, useRef } from "react";
-import useCumulatorController from "../hooks/useCumulatorController";
+import { useEffect } from "react";
+// import useCumulatorController from "../hooks/useCumulatorController";
 import BorderCardFigureConditions from "./BorderCardFigureConditions";
 import CenterCardElement from "./CenterCardElement";
 
@@ -12,29 +12,26 @@ const Card = ({
   scoreArray,
   cardsNumber,
 }) => {
-  const isMounted = useRef(false);
-  const { numberOfReload } = useCumulatorController({
-    scoreArray,
-  });
+  // const { numberOfReload, scoreFinal, classmentFinal } = useCumulatorController(
+  //   {
+  //     scoreArray,
+  //   }
+  // );
+
+  // useEffect(() => {
+  //   console.log("scoreArray", scoreArray);
+  //   console.log("scoreFinal", scoreFinal);
+  //   console.log("classmentFinal", classmentFinal);
+  // }, [scoreArray, classmentFinal, scoreFinal, numberOfReload]);
 
   useEffect(() => {
-    console.log("scoreArray", scoreArray);
-    // console.log("number of reloads", numberOfReload);
-  }, [scoreArray, numberOfReload]);
-
-  useEffect(() => {
-    if (!isMounted) {
-      return;
-    }
-    isMounted.current = true;
     if (
       numberArray.id === randomValueArray.id &&
       scoreArray.length < Number(cardsNumber)
     ) {
       scoreArray.push(randomValueArray.score);
-      isMounted.current = false;
     }
-  }, [isMounted, scoreArray, numberArray, randomValueArray, cardsNumber]);
+  }, [scoreArray, numberArray, randomValueArray, cardsNumber]);
   return (
     <div className="card-container">
       <p

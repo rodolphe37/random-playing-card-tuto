@@ -12,12 +12,19 @@ const ScoreTopComponent = ({ scoreArray }) => {
         alignItems: "center",
         justifyContent: "space-around",
         width: "100%",
-        marginTop: "2rem",
-        marginBottom: "5rem",
       }}
     >
       <span>Total score: {classmentFinal.pts}Pts</span>
-      <p style={{ color: numberOfReload === 3 ? "red" : "white" }}>
+      <p
+        style={{
+          color:
+            numberOfReload === 3
+              ? "red"
+              : numberOfReload === 4
+              ? "grey"
+              : "white",
+        }}
+      >
         Reloads: {numberOfReload}/4
       </p>
     </span>
