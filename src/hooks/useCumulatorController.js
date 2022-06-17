@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef } from "react";
+import { useCallback, useEffect, useMemo, useRef } from "react";
 import { useSessionStorage } from "./useSessionStorage";
 
 const useCumulatorController = ({ scoreArray }) => {
@@ -19,8 +19,9 @@ const useCumulatorController = ({ scoreArray }) => {
 
   useEffect(() => {
     const cumulScore = scoreArray.reduce((accum, item) => accum + item, 0);
-
-    if (cumulScore) {
+    if (!isLoading) return;
+    isLoading.current = true;
+    if (isLoading) {
       handleClassment();
       if (classmentFinal.pts === 0) {
         setClassmentFinal({
