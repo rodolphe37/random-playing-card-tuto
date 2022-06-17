@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { useSessionStorage } from "./useSessionStorage";
 
 const useCumulatorController = ({ scoreArray }) => {
@@ -34,8 +34,6 @@ const useCumulatorController = ({ scoreArray }) => {
           pts: classmentFinal.pts + cumulScore,
         });
       }
-
-      isLoading.current = false;
     }
     return () => {
       setNumberOfReload(0);
