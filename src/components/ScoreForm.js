@@ -66,7 +66,7 @@ const ScoreForm = ({ scoreArray }) => {
         <button
           onClick={() =>
             alert(
-              `Your NickName is :${name}, Your Country is: ${country}, and your score is:${classmentFinal}pts`
+              `Your NickName is :${name}, Your Country is: ${country}, and your score is:${classmentFinal.pts}pts`
             )
           }
           className="SendingButton"

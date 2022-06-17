@@ -8,7 +8,6 @@ import ScoreForm from "./ScoreForm";
 
 const CardsWrapper = ({ cardsNumber, scoreArray, numberOfReload }) => {
   const cardNumbers = cardsNumber;
-
   const { randomValueFromArray } = useRandomValueFromArray();
 
   useEffect(() => {
