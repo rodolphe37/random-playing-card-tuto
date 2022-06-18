@@ -3,27 +3,9 @@ import Sigles1 from "./assets/startPage/sigles-1.png";
 import Sigles2 from "./assets/startPage/sigles-2.png";
 import "./App.css";
 import HomePage from "./HomePage";
-import { useEffect, useLayoutEffect } from "react";
-import { useSessionStorage } from "./hooks/useSessionStorage";
-import { useRecoilState } from "recoil";
-import { classmentAtom } from "./assets/statesManager/classmentAtom";
 import GamePage from "./GamePage";
-import useCumulatorController from "./hooks/useCumulatorController";
-import useStartGameLogic from "./hooks/useStartGameLogic";
 
 const App = () => {
-  const [classmentFromState, setClassmentFromState] =
-    useRecoilState(classmentAtom);
-  const [classmentFinal] = useSessionStorage("classment", {
-    pts: 0,
-    name: "",
-  });
-
-  useEffect(() => {
-    console.log("classment from state", classmentFromState);
-    console.log("classment from session ", classmentFinal);
-  }, [setClassmentFromState, classmentFinal, classmentFromState]);
-
   return (
     <div className="App">
       <div className="App-header">

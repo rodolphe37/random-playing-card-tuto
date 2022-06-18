@@ -31,7 +31,7 @@ const CardsWrapper = ({
 
       <div
         className={`modal-form ${
-          numberOfReload === 3 ? "scale-in-center" : "hidden"
+          numberOfReload === 3 ? "slide-in-top " : "hidden"
         }`}
       >
         <ScoreForm

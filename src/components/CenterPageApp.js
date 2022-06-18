@@ -9,8 +9,13 @@ const CenterPageApp = ({
   numberOfReload,
 }) => {
   useEffect(() => {
-    console.log("classment from center Page", classmentFinal);
+    console.log(
+      "%cclassment from center Page",
+      "font-weight: bold; color:#871F78; padding: 2px",
+      classmentFinal
+    );
   }, [classmentFinal]);
+
   return (
     <>
       {classmentFinal && (

@@ -261,7 +261,9 @@ button:hover {
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
-  width: 100%;
+  width: 89%;
+  position: absolute;
+  z-index: 10;
 }
 .modal-form .infos {
   display: flex;
@@ -356,10 +358,11 @@ select {
 
 /* ANIMATIONS */
 .scale-out-center {
-  animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: scale-out-center 1.2s 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+    both;
 }
 .scale-in-center {
-  animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: scale-in-center 1.2s 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 /* KEYFRAMES ANIMATIONS */
@@ -380,6 +383,19 @@ select {
   }
   100% {
     transform: scale(1);
+    opacity: 1;
+  }
+}
+.slide-in-top {
+  animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
     opacity: 1;
   }
 }
