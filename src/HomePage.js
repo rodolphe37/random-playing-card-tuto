@@ -19,7 +19,7 @@ function HomePage() {
       ...classmentFinal,
       pts: classmentFinal.pts + cumulScore,
     });
-    window.location.replace("game");
+    window.location.replace("/game");
   };
 
   return (
