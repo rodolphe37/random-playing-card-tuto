@@ -17,8 +17,8 @@ const ScoreForm = ({ scoreArray, setScoreSended }) => {
   const { classmentFinal } = useCumulatorController({ scoreArray });
 
   useEffect(() => {
-    console.log("class from ScoreForm");
-  }, []);
+    console.log("classment from ScoreForm", classmentFinal);
+  }, [classmentFinal]);
 
   const handleReloadGame = () => {
     setScoreSended(true);
@@ -26,6 +26,7 @@ const ScoreForm = ({ scoreArray, setScoreSended }) => {
     alert(
       `Your NickName is :${name}, Your Country is: ${country}, and your score is:${classmentFinal.pts}pts`
     );
+    sessionStorage.clear();
     navigate("/");
     window.location.reload();
   };
