@@ -19,6 +19,7 @@
   align-items: center;
   justify-content: flex-start;
   padding-top: 1rem;
+  position: relative;
 }
 .App-header {
   display: flex;
@@ -261,18 +262,21 @@ button:hover {
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
-  width: 89%;
-  position: absolute;
+  width: 100%;
+  position: relative;
   z-index: 10;
+  height: 100%;
 }
 .modal-form .infos {
   display: flex;
+  top: -7rem;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   background-color: white;
   padding: 4rem;
-  width: 45vw;
+  width: 40rem;
+  position: absolute;
 }
 .inputs-container {
   display: flex;
@@ -358,11 +362,11 @@ select {
 
 /* ANIMATIONS */
 .scale-out-center {
-  animation: scale-out-center 1.2s 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+  animation: scale-out-center 0.7s 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53)
     both;
 }
 .scale-in-center {
-  animation: scale-in-center 1.2s 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: scale-in-center 0.7s 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 /* KEYFRAMES ANIMATIONS */
@@ -387,7 +391,7 @@ select {
   }
 }
 .slide-in-top {
-  animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-top 1.2s 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 @keyframes slide-in-top {
   0% {

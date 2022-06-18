@@ -10,14 +10,12 @@ const GamePage = () => {
   });
 
   return (
-    <div>
-      <CenterPageApp
-        classmentFinal={classmentFinal}
-        scoreArray={scoreArray}
-        setScoreSended={setScoreSended}
-        numberOfReload={numberOfReload}
-      />
-    </div>
+    <CenterPageApp
+      classmentFinal={classmentFinal}
+      scoreArray={scoreArray}
+      setScoreSended={setScoreSended}
+      numberOfReload={numberOfReload}
+    />
   );
 };
 
