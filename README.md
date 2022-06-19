@@ -4,6 +4,8 @@
 
 # Repo for "Random playing cards with React js Tutorial"
 
+<img  style =" margin-top: 5px; margin-right: 22px " src="demo/logo.png" alt="drawing" height="25%" width="25%"/>
+
 > This repo is **_source code for the medium article tutorial_** &
 > the code is **_open sources_**!
 
