@@ -9,18 +9,21 @@ const useCumulatorController = ({ scoreArray }) => {
     name: "",
   });
   const [score, setScore] = useState(0);
+  const cumulScore = scoreArray.reduce((accum, item) => accum + item, 0);
 
   const handleClassment = useCallback(() => {
-    const cumulScore = scoreArray.reduce((accum, item) => accum + item, 0);
-
-    setScoreFinal(cumulScore);
     setNumberOfReload(numberOfReload + 1);
-  }, [numberOfReload, scoreArray, setNumberOfReload, setScoreFinal]);
+  }, [numberOfReload, setNumberOfReload]);
 
   useEffect(() => {
-    const cumulScore = scoreArray.reduce((accum, item) => accum + item, 0);
+    console.log(
+      "%cCumulator hook mounted start",
+      "color: white;  font-weight:bold; background-color:orange;padding: 2px"
+    );
 
-    handleClassment();
+    if (cumulScore !== 0 || scoreArray.length > 0) {
+      setScoreFinal(cumulScore);
+    }
     if (classmentFinal.pts === 0) {
       setClassmentFinal({
         ...classmentFinal,
@@ -34,13 +37,17 @@ const useCumulatorController = ({ scoreArray }) => {
     }
 
     console.log("cumulScore from hook", cumulScore);
-
-    return () => {
-      setNumberOfReload(0);
-      setScoreFinal(0);
-    };
+    console.log(
+      "%cCumulator hook mounted end",
+      "color: black;  font-weight:bold; background-color:orange;padding: 2px"
+    );
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [scoreArray, setClassmentFinal]);
+  }, [scoreArray, setScoreFinal, cumulScore, setClassmentFinal]);
+
+  useEffect(() => {
+    handleClassment();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return {
     scoreFinal,

@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-// import useCumulatorController from "../hooks/useCumulatorController";
+import { useEffect, useRef } from "react";
+import useCumulatorController from "../hooks/useCumulatorController";
 import BorderCardFigureConditions from "./BorderCardFigureConditions";
 import CenterCardElement from "./CenterCardElement";
 
@@ -12,26 +12,40 @@ const Card = ({
   scoreArray,
   cardsNumber,
 }) => {
-  // const { numberOfReload, scoreFinal, classmentFinal } = useCumulatorController(
-  //   {
-  //     scoreArray,
-  //   }
-  // );
-
-  // useEffect(() => {
-  //   console.log("scoreArray", scoreArray);
-  //   console.log("scoreFinal", scoreFinal);
-  //   console.log("classmentFinal", classmentFinal);
-  // }, [scoreArray, classmentFinal, scoreFinal, numberOfReload]);
+  const isMounted = useRef(false);
+  const { scoreFinal, classmentFinal } = useCumulatorController({
+    scoreArray,
+  });
 
   useEffect(() => {
-    if (
-      numberArray.id === randomValueArray.id &&
-      scoreArray.length < Number(cardsNumber)
-    ) {
-      scoreArray.push(randomValueArray.score);
+    console.log(
+      "%cCard component mounted start",
+      "color: white;  font-weight:bold; background-color:black;padding: 2px"
+    );
+    if (!isMounted) {
+      return;
     }
-  }, [scoreArray, numberArray, randomValueArray, cardsNumber]);
+    isMounted.current = true;
+    if (scoreArray.length < Number(cardsNumber)) {
+      scoreArray.push(randomValueArray.score);
+      isMounted.current = false;
+    }
+    console.log("scoreArray", scoreArray);
+    console.log("scoreFinal", scoreFinal);
+    console.log("classmentFinal", classmentFinal);
+    console.log(
+      "%cCard component mounted end",
+      "color: white;  font-weight:bold; background-color:black;padding: 2px"
+    );
+  }, [
+    isMounted,
+    scoreArray,
+    numberArray,
+    classmentFinal,
+    randomValueArray,
+    scoreFinal,
+    cardsNumber,
+  ]);
   return (
     <div className="card-container">
       <p

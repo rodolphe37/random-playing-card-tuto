@@ -17,7 +17,15 @@ const ScoreForm = ({ scoreArray, setScoreSended }) => {
   const { classmentFinal } = useCumulatorController({ scoreArray });
 
   useEffect(() => {
+    console.log(
+      "%cScore Component mounted start",
+      "color: white;  font-weight:bold; background-color:green;padding: 2px"
+    );
     console.log("classment from ScoreForm", classmentFinal);
+    console.log(
+      "%cScore Component mounted end",
+      "color: white;  font-weight:bold; background-color:darkgreen;padding: 2px"
+    );
   }, [classmentFinal]);
 
   const handleReloadGame = () => {
