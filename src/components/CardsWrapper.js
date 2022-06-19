@@ -5,6 +5,7 @@ import { Fragment, useEffect } from "react";
 
 import CumulatorComponent from "./CumulatorComponent";
 import ScoreForm from "./ScoreForm";
+import ReloadIconFIle from "../assets/ReloadIconFile";
 
 const CardsWrapper = ({
   cardsNumber,
@@ -31,7 +32,7 @@ const CardsWrapper = ({
   return (
     <>
       <div
-        className={`card-wrapper ${
+        className={`score-cards__container ${
           numberOfReload === 3 ? "scale-out-center" : ""
         }`}
       >
@@ -49,6 +50,16 @@ const CardsWrapper = ({
           scoreArray={scoreArray}
           numberOfReload={numberOfReload}
         />
+      </div>
+      <div
+        className={`button-container ${
+          numberOfReload === 3 ? "scale-out-center" : ""
+        }`}
+      >
+        <button onClick={() => window.location.reload()}>
+          <ReloadIconFIle />
+          <span style={{ fontSize: 14 }}>Reload Cards</span>
+        </button>
       </div>
       <div
         className={`card-wrapper ${

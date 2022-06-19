@@ -5,6 +5,7 @@ import "./modal-style.css";
 import star from "../../assets/startPage/Circle-icons-star.svg.png";
 import { useRecoilState } from "recoil";
 import { SortedArrayFromServerAtom } from "../../assets/statesManager/classmentAtom";
+import Clssm from "../../assets/startPage/classement.png";
 
 const ModalComponent = ({ localStoreScores, openModal, setOpenModal }) => {
   const { compareValues } = useCompareValues();
@@ -31,8 +32,11 @@ const ModalComponent = ({ localStoreScores, openModal, setOpenModal }) => {
 
   return (
     <>
-      <button onClick={() => setOpenModal(true)}>
-        <a href="#id01">Global classment</a>
+      <button className="classment-button" onClick={() => setOpenModal(true)}>
+        <a href="#id01">
+          <img style={{ filter: "none " }} src={Clssm} alt="cards" width={70} />
+          Global classment
+        </a>
       </button>
 
       {openModal && localStoreScores && (

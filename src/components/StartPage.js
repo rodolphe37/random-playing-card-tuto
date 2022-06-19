@@ -4,6 +4,7 @@ import Cards from "../assets/startPage/cards.png";
 import { globalClassmentAtom } from "../assets/statesManager/classmentAtom";
 import useFetchData from "../hooks/useFetchData";
 import GlobalClassmentComponent from "./GlobalClassmentComponent";
+import cards from "../assets/startPage/blackjack.png";
 
 const StartPage = ({ setStartGame }) => {
   const { getData } = useFetchData();
@@ -33,8 +34,17 @@ const StartPage = ({ setStartGame }) => {
     <div className="start-page__container">
       <div className="buttons-container">
         <div className="start-page__footer">
-          <button onClick={setStartGame}>StartGame</button>
+          <button className="start-button" onClick={setStartGame}>
+            <img
+              style={{ filter: "none " }}
+              src={cards}
+              alt="cards"
+              width={70}
+            />
+            <span>StartGame</span>
+          </button>
         </div>
+
         {globalClassment.length > 0 ? (
           <GlobalClassmentComponent
             localStoreScores={localStoreScores}
@@ -45,12 +55,20 @@ const StartPage = ({ setStartGame }) => {
         )}
         <div />
       </div>
-      <img src={Cards} alt="cards" width={250} />
       <div className="start-page__header">
         <h1>Are you the luckiest person alive? </h1>
       </div>
+
       <div className="start-page__center">
-        <h4>Try and see the ranking of the luckiest...</h4>
+        <div className="header-rule__container">
+          <h4>Try and see the ranking of the luckiest...</h4>
+          <img
+            className="card-start-page"
+            src={Cards}
+            alt="cards"
+            width={190}
+          />
+        </div>
         <div className="rules__container">
           <h5>The rule!</h5>
           <ul className="rule-list">

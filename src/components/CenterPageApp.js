@@ -27,6 +27,7 @@ const CenterPageApp = ({
           scoreArray={scoreArray}
         />
       )}
+
       <CardsWrapper
         sortedArrayScore={sortedArrayScore}
         setScoreSended={setScoreSended}
@@ -34,13 +35,6 @@ const CenterPageApp = ({
         scoreArray={scoreArray}
         cardsNumber="5"
       />
-      <div
-        className={`button-container ${
-          numberOfReload === 3 ? "scale-out-center" : ""
-        }`}
-      >
-        <button onClick={() => window.location.reload()}>Reload Card</button>
-      </div>
     </>
   );
 };
