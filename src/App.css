@@ -522,3 +522,29 @@ select {
     width: 98% !important;
   }
 }
+@media screen and (max-width: 900px) {
+  .buttons-container button {
+    width: 33vw !important;
+  }
+  .start-button img,
+  .classment-button a img {
+    transform: scale(0.7);
+  }
+  .start-button span,
+  .classment-button a {
+    font-size: 0.7rem;
+  }
+  .card-start-page {
+    transform: scale(0.5) !important;
+  }
+  .header-rule__container h4 {
+    margin-left: 2rem;
+  }
+  .App-header h1,
+  .start-page__header h1 {
+    font-size: 1rem;
+  }
+  .rules__container {
+    width: 87% !important;
+  }
+}
