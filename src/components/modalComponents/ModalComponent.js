@@ -26,7 +26,11 @@ const ModalComponent = ({ localStoreScores, openModal, setOpenModal }) => {
 
   return (
     <>
-      <button className="classment-button" onClick={() => setOpenModal(true)}>
+      <button
+        title="See full classment of players"
+        className="classment-button"
+        onClick={() => setOpenModal(true)}
+      >
         <a href="#id01">
           <img style={{ filter: "none " }} src={Clssm} alt="cards" width={70} />
           Global classment

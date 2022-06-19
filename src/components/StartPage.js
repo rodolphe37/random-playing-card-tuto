@@ -1,15 +1,27 @@
 import { useCallback, useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
 import Cards from "../assets/startPage/cards.png";
-import { globalClassmentAtom } from "../assets/statesManager/classmentAtom";
+import {
+  globalClassmentAtom,
+  SortedArrayFromServerAtom,
+} from "../assets/statesManager/classmentAtom";
 import useFetchData from "../hooks/useFetchData";
 import GlobalClassmentComponent from "./GlobalClassmentComponent";
 import cards from "../assets/startPage/blackjack.png";
+import FirstOfList from "./FirstOfList";
 
 const StartPage = ({ setStartGame }) => {
   const { getData } = useFetchData();
   const [globalClassment] = useRecoilState(globalClassmentAtom);
   const [localStoreScores, setLocalStoreScores] = useState([]);
+  const [sortedArrayScore] = useRecoilState(SortedArrayFromServerAtom);
+  const [winnerOfMoment, setWinnerOfMoment] = useState([]);
+
+  useEffect(() => {
+    if (sortedArrayScore.length > 0 && winnerOfMoment.length === 0) {
+      setWinnerOfMoment(sortedArrayScore[0]);
+    }
+  }, [sortedArrayScore, winnerOfMoment]);
 
   const getAllScores = useCallback(async () => {
     await getData();
@@ -30,11 +42,17 @@ const StartPage = ({ setStartGame }) => {
       controller.abort(signal);
     };
   }, [globalClassment, getAllScores, localStoreScores]);
+
   return (
     <div className="start-page__container">
+      {winnerOfMoment ? <FirstOfList winnerOfMoment={winnerOfMoment} /> : ""}
       <div className="buttons-container">
         <div className="start-page__footer">
-          <button className="start-button" onClick={setStartGame}>
+          <button
+            title="start the game now"
+            className="start-button"
+            onClick={setStartGame}
+          >
             <img
               style={{ filter: "none " }}
               src={cards}
