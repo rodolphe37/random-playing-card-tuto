@@ -5,11 +5,15 @@ import { useRecoilState } from "recoil";
 import { classmentAtom } from "../assets/statesManager/classmentAtom";
 import useCumulatorController from "../hooks/useCumulatorController";
 import useFlagByCountry from "../hooks/useFlagByCountry";
+import useRealTimeHours from "../hooks/useRealTimeHours";
+import useTodayDate from "../hooks/useTodayDate";
 import { BASE_URL } from "../utils/fetchUrls";
 import SelectCountry from "./SelectCountry";
 
 const ScoreForm = ({ scoreArray, setScoreSended }) => {
   let navigate = useNavigate();
+  const { time } = useRealTimeHours();
+  const { LocalDate } = useTodayDate();
   // eslint-disable-next-line no-unused-vars
   const [classmentFromState, setClassmentFromState] =
     useRecoilState(classmentAtom);
@@ -37,6 +41,8 @@ const ScoreForm = ({ scoreArray, setScoreSended }) => {
       country: country,
       score: classmentFinal.pts,
       flagCode: dataCountryCode,
+      date: LocalDate,
+      time: time,
     };
     await axios.post(`${BASE_URL}/classment/`, payload).then(() => {
       try {

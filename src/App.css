@@ -154,6 +154,11 @@
 .App-link {
   color: #61dafb;
 }
+.date-time__container {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
 .card-start-page {
   padding: 0.4rem;
   background-color: green;
@@ -540,10 +545,13 @@ select {
   }
   .inputs-container {
     margin-top: 3rem !important;
-    width: 98% !important;
+    width: 98%;
   }
 }
 @media screen and (max-width: 900px) {
+  .inputs-container {
+    width: 100% !important;
+  }
   .buttons-container button {
     width: 33vw !important;
   }

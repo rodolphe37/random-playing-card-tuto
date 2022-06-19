@@ -214,6 +214,10 @@ const ModalComponent = ({ localStoreScores, openModal, setOpenModal }) => {
                                                               }}
                                                             />
                                                           </span>
+                                                          <span className="date-time__container">
+                                                            {res.date},{" "}
+                                                            {res.time}
+                                                          </span>
                                                         </div>
                                                       </li>
                                                     </ol>
