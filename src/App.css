@@ -119,8 +119,9 @@
   border-radius: 8px;
   border: 1px solid white;
 }
+
 .custom-counter {
-  transform: scale(1);
+  transform: scale(1) !important;
 }
 .start-button,
 .classment-button a {
@@ -561,8 +562,11 @@ select {
   }
 }
 @media screen and (max-width: 900px) {
-  .custom-counter {
+  .start-page__container .custom-counter {
     transform: scale(0.799) !important;
+  }
+  .global-classment__container .global-classment__inner {
+    transform: scale(1) !important;
   }
   .inputs-container {
     width: 100% !important;
