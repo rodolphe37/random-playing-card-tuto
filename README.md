@@ -13,13 +13,22 @@
 
 ## :computer: Online Demo
 
-**You can test this app** **[here](https://random-playing-card-react.netlify.app/)**
+**You can test the first step app** **[here](https://random-playing-card-react.netlify.app/)**
+
+**You can test the final version app** **[here](https://are-you-lucky-game.netlify.app/)**
 
 ---
 
 ### Gif demo
 
+**_Step 1 demo_**
 <img  style =" margin-top: 5px; margin-right: 22px " src="demo/random-card-tuto.gif" alt="drawing" height="100%" width="100%"/>
+
+**_Step 2 demo_**
+<img  style =" margin-top: 5px; margin-right: 22px " src="demo/step2-demo.gif" alt="drawing" height="100%" width="100%"/>
+
+**_Final version_**
+<img  style =" margin-top: 5px; margin-right: 22px " src="demo/final-demo.gif" alt="drawing" height="100%" width="100%"/>
 
 ---
 
