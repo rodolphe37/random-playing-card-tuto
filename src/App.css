@@ -371,6 +371,7 @@ button {
   color: #fff;
   cursor: pointer;
   transition: all 0.4s ease-in-out;
+  border-radius: 6px;
 }
 button:hover {
   background-color: #fff;
@@ -399,7 +400,8 @@ button:hover {
   justify-content: space-around;
   background-color: white;
   padding: 4rem;
-  width: 40rem;
+  width: auto;
+  min-width: 39vh;
   position: absolute;
 }
 .inputs-container {
