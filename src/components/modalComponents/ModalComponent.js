@@ -120,7 +120,16 @@ const ModalComponent = ({ localStoreScores, openModal, setOpenModal }) => {
                                                                   alt="star"
                                                                   width={40}
                                                                 />
-                                                                <p>{index}</p>
+                                                                <p
+                                                                  style={{
+                                                                    color:
+                                                                      "#fff",
+                                                                    fontWeight:
+                                                                      "bold",
+                                                                  }}
+                                                                >
+                                                                  {index}
+                                                                </p>
                                                               </Fragment>
                                                             </div>
                                                           ) : (
