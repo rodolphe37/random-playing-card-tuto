@@ -1,7 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import useCompareValues from "../../hooks/useCompareValues";
 import "./modal-style.css";
+import star from "../../assets/startPage/Circle-icons-star.svg.png";
 
 const ModalComponent = ({ localStoreScores, openModal, setOpenModal }) => {
   const { compareValues } = useCompareValues();
@@ -104,7 +105,29 @@ const ModalComponent = ({ localStoreScores, openModal, setOpenModal }) => {
                                                     >
                                                       <li>
                                                         <div className="numerSection">
-                                                          {index}
+                                                          {index <= 5 ? (
+                                                            <div className="numerSection">
+                                                              <Fragment>
+                                                                <img
+                                                                  src={star}
+                                                                  alt="star"
+                                                                  width={40}
+                                                                />
+                                                                <p>{index}</p>
+                                                              </Fragment>
+                                                            </div>
+                                                          ) : (
+                                                            <div className="numerSection">
+                                                              <span
+                                                                style={{
+                                                                  textAlign:
+                                                                    "center",
+                                                                }}
+                                                              >
+                                                                {index}
+                                                              </span>
+                                                            </div>
+                                                          )}
                                                         </div>
                                                         <div className="name-section">
                                                           <span

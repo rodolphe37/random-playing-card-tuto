@@ -56,16 +56,22 @@
   display: flex;
 }
 .global-classment__inner li {
-  display: flex;
+  display: grid;
   align-items: center;
-  justify-content: space-around;
   width: 94%;
   gap: 2rem;
   border: 1px dotted black;
   margin: 1rem;
+  grid-template-columns: repeat(3, 1fr);
 }
 .numerSection {
   margin-left: 1rem;
+  position: relative;
+}
+.numerSection p {
+  position: absolute;
+  top: 12px;
+  left: 15px;
 }
 .country-section {
   display: flex;
@@ -100,7 +106,6 @@
 }
 .rule-list {
   max-width: 60%;
-
   line-height: 1.3rem;
 }
 .rules__container {

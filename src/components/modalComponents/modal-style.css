@@ -107,7 +107,7 @@
 .containerModal {
   padding: 2px 16px;
   color: black;
-  max-height: 45vh;
+  max-height: 50vh;
   overflow: hidden;
   overflow-y: scroll;
 }
