@@ -51,7 +51,7 @@ const CardsWrapper = ({
       </div>
       <div
         className={`card-wrapper ${
-          numberOfReload === 3 ? "scale-out-center" : ""
+          numberOfReload === 3 ? "scale-out-center-with-delay" : ""
         }`}
       >
         {[...Array(Number(cardNumbers))].map((_numb, index) => {
