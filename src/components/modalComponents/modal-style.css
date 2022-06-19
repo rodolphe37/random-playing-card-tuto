@@ -4,7 +4,7 @@
     opacity: 0;
   }
   to {
-    top: 0px;
+    top: 0;
     opacity: 1;
   }
 }
@@ -75,16 +75,17 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   animation-name: slideDownFadeIN;
   animation-duration: 0.5s;
-  top: 9vh;
 }
 @media screen and (min-width: 901px) {
   .modal-dialog .modal-content {
     width: 55%;
+    top: 3vh;
   }
 }
 @media screen and (max-width: 900px) {
   .modal-dialog .modal-content {
     width: 49%;
+    top: 1vh;
   }
   .global-classment__container {
     transform: scale(0.78) translate(0, -20rem);
