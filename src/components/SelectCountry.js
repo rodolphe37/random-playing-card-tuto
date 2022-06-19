@@ -45,9 +45,7 @@ function SelectCountry({ country, setCountry }) {
       <option value="Belarus">Belarus</option>
       <option value="Belize">Belize</option>
       <option value="Bermuda">Bermuda</option>
-      <option value="Bolivia (Plurinational State of Bolivia)">
-        Bolivia (Plurinational State of Bolivia)
-      </option>
+      <option value="Bolivia (Plurinational State of Bolivia)">Bolivia</option>
       <option value="Brasil">Brasil</option>
       <option value="Barbados">Barbados</option>
       <option value="Brunei Darussalam">Brunei Darussalam</option>
@@ -57,22 +55,15 @@ function SelectCountry({ country, setCountry }) {
       <option value="Central African Republic">Central African Republic</option>
       <option value="Canada">Canada</option>
       <option value="Catalonia (autonomous community in Spain)">
-        Catalonia (autonomous community in Spain)
+        Catalonia
       </option>
       <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
       <option value="Switzerland">Switzerland</option>
       <option value="Chile">Chile</option>
-      <option value="China (People's Republic of China)">
-        China (People's Republic of China)
-      </option>
+      <option value="China (People's Republic of China)">China</option>
       <option value="Côte d'Ivoire">Côte d'Ivoire</option>
       <option value="Cameroon">Cameroon</option>
-      <option value="Congo (Democratic Republic of the Congo)">
-        Congo (Democratic Republic of the Congo)
-      </option>
-      <option value="Congo (Congo-Brazzaville)">
-        Congo (Congo-Brazzaville)
-      </option>
+      <option value="Congo (Congo-Brazzaville)">Congo Congo-Brazzaville</option>
       <option value="Colombia">Colombia</option>
       <option value="Comoros">Comoros</option>
       <option value="Cabo Verde">Cabo Verde</option>
@@ -90,9 +81,7 @@ function SelectCountry({ country, setCountry }) {
       <option value="Cyprus">Cyprus</option>
       <option value="Cayman Islands">Cayman Islands</option>
       <option value="Czech Republic">Czech Republic</option>
-      <option value="Germany (Federal Republic of Germany)">
-        Germany (Federal Republic of Germany)
-      </option>
+      <option value="Germany (Federal Republic of Germany)">Germany</option>
       <option value="Djibouti">Djibouti</option>
       <option value="Dominica">Dominica</option>
       <option value="Denmark">Denmark</option>
@@ -101,7 +90,7 @@ function SelectCountry({ country, setCountry }) {
       <option value="Ecuador">Ecuador</option>
       <option value="Egypt">Egypt</option>
       <option value="England (country that is part of the United Kingdom)">
-        England (country that is part of the United Kingdom)
+        England
       </option>
       <option value="Eritrea">Eritrea</option>
       <option value="Western Sahara">Western Sahara</option>

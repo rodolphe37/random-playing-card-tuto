@@ -21,7 +21,7 @@ const StartPage = ({ setStartGame }) => {
       getAllScores(signal);
     }
     if (globalClassment.length !== localStoreScores.length) {
-      const newArrayOfScore = globalClassment.map((res) => res.scoresList)[0];
+      const newArrayOfScore = globalClassment.map((res) => res);
       setLocalStoreScores(newArrayOfScore);
     }
 

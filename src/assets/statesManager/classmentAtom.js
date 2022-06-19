@@ -20,3 +20,8 @@ export const globalClassmentAtom = atom({
   key: "globalClassmentAtom",
   default: [],
 });
+
+export const SortedArrayFromServerAtom = atom({
+  key: "SortedArrayFromServerAtom",
+  default: [],
+});

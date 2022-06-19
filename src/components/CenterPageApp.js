@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import { useRecoilState } from "recoil";
+import { SortedArrayFromServerAtom } from "../assets/statesManager/classmentAtom";
 import CardsWrapper from "./CardsWrapper";
 import ScoreTopComponent from "./ScoreTopComponent";
 
@@ -8,6 +10,7 @@ const CenterPageApp = ({
   setScoreSended,
   numberOfReload,
 }) => {
+  const [sortedArrayScore] = useRecoilState(SortedArrayFromServerAtom);
   useEffect(() => {
     console.log(
       "%cclassment from center Page",
@@ -25,6 +28,7 @@ const CenterPageApp = ({
         />
       )}
       <CardsWrapper
+        sortedArrayScore={sortedArrayScore}
         setScoreSended={setScoreSended}
         numberOfReload={numberOfReload}
         scoreArray={scoreArray}

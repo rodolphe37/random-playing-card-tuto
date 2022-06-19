@@ -1,18 +1,24 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useEffect } from "react";
 import useCompareValues from "../../hooks/useCompareValues";
 import "./modal-style.css";
 import star from "../../assets/startPage/Circle-icons-star.svg.png";
+import { useRecoilState } from "recoil";
+import { SortedArrayFromServerAtom } from "../../assets/statesManager/classmentAtom";
 
 const ModalComponent = ({ localStoreScores, openModal, setOpenModal }) => {
   const { compareValues } = useCompareValues();
-  const [sortedArrayScore, setSortedArrayScore] = useState([]);
+  const [sortedArrayScore, setSortedArrayScore] = useRecoilState(
+    SortedArrayFromServerAtom
+  );
 
   useEffect(() => {
     if (sortedArrayScore.length === 0 && localStoreScores.length > 0) {
       const arrayForSort = [...localStoreScores];
 
-      setSortedArrayScore(arrayForSort.sort(compareValues("score", "desc")));
+      setSortedArrayScore(
+        arrayForSort.map((res) => res).sort(compareValues("score", "desc"))
+      );
 
       console.log(
         "new array",
@@ -20,6 +26,7 @@ const ModalComponent = ({ localStoreScores, openModal, setOpenModal }) => {
       );
       console.log("local classment", localStoreScores);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [compareValues, sortedArrayScore, localStoreScores]);
 
   return (
@@ -33,14 +40,14 @@ const ModalComponent = ({ localStoreScores, openModal, setOpenModal }) => {
           <div id="id01" className="modal">
             <div className="modal-dialog">
               <div className="modal-content">
-                <header className="containerModal headerModal">
+                <header className=" headerModal">
                   <a href="#top" className="closebtn">
                     ×
                   </a>
                   <h2
                     style={{ fontSize: 20, textAlign: "center", marginTop: 5 }}
                   >
-                    Global scores classment
+                    Global scores classment ({localStoreScores.length} players)
                   </h2>
                 </header>
                 <div className="containerModal">
@@ -176,7 +183,12 @@ const ModalComponent = ({ localStoreScores, openModal, setOpenModal }) => {
                                                           </span>
                                                         </div>
                                                         <div className="country-section">
-                                                          <p>{res.country}</p>
+                                                          <p>
+                                                            {res.country.substring(
+                                                              0,
+                                                              25
+                                                            ) + ""}
+                                                          </p>
                                                           <span className="flag-icon">
                                                             <span
                                                               className={`flag-icon flag-icon-${res.flagCode}`}
@@ -210,7 +222,7 @@ const ModalComponent = ({ localStoreScores, openModal, setOpenModal }) => {
                     </div>
                   </div>
                 </div>
-                <footer className="containerModal footerModal">
+                <footer className=" footerModal">
                   <span>
                     The ranking is organised from highest to lowest score.
                   </span>

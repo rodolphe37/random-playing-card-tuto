@@ -7,6 +7,7 @@ const GlobalClassmentComponent = ({
   sortedArray,
 }) => {
   const [openModal, setOpenModal] = useState(false);
+
   return (
     <>
       <ModalComponent

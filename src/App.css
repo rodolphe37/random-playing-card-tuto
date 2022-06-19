@@ -52,8 +52,9 @@
   filter: drop-shadow(2px 4px 6px grey);
 }
 .global-classment__inner {
-  width: 100%;
+  width: 93%;
   display: flex;
+  margin: 1rem;
 }
 .global-classment__inner li {
   display: grid;
@@ -79,6 +80,9 @@
   justify-content: center;
   flex-direction: column;
   padding: 0.4rem 0 0 0;
+}
+.country-section p {
+  font-size: 11px;
 }
 .country-section .flag-icon span {
   transform: scale(1.5) !important;

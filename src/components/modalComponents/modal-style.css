@@ -79,7 +79,7 @@
 }
 @media screen and (min-width: 901px) {
   .modal-dialog .modal-content {
-    width: auto;
+    width: 55%;
   }
 }
 @media screen and (max-width: 900px) {
@@ -107,7 +107,8 @@
 .containerModal {
   padding: 2px 16px;
   color: black;
-  max-height: 50vh;
+  max-height: 70vh;
+  height: auto;
   overflow: hidden;
   overflow-y: scroll;
 }
@@ -120,10 +121,16 @@
   align-items: center;
   justify-content: space-between;
   flex-direction: row-reverse;
+  width: 100%;
+  padding: 1rem;
 }
 
 .footerModal {
   background-color: #c9c9ff;
-  font-size: 20px;
+  font-size: 15px;
   color: black;
+  padding: 1rem;
+}
+.post_content {
+  margin: 0 8rem 0 8rem;
 }
