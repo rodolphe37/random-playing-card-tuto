@@ -51,10 +51,14 @@ const ScoreForm = ({ scoreArray, setScoreSended }) => {
   };
 
   const handleReloadGame = async () => {
-    await sendStatusToServer().then(() => {
-      navigate("/");
-      window.location.reload();
-    });
+    if (name !== "" && country !== "") {
+      await sendStatusToServer().then(() => {
+        navigate("/");
+        window.location.reload();
+      });
+    } else {
+      alert("Enter your nickname & counrty please");
+    }
   };
 
   return (
