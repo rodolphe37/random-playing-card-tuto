@@ -362,6 +362,9 @@ button:hover {
   background-color: #fff;
   color: #444;
 }
+.button-container button:hover svg {
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
 
 /* MODAL SCORE SECTION */
 .modal-form {
@@ -516,6 +519,14 @@ select {
   }
   100% {
     transform: translateZ(0) rotateY(0);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 
