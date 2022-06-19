@@ -9,7 +9,7 @@ function SelectCountry({ country, setCountry }) {
       name="country"
       className="form-control"
     >
-      <option value="">Selectionnez un pays</option>
+      <option value="">Select a country</option>
       <option value="Aruba">Aruba</option>
       <option value="Afghanistan">Afghanistan</option>
       <option value="Angola">Angola</option>
