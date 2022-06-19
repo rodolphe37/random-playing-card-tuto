@@ -1,22 +1,58 @@
 import Card from "./Card";
 import { numbers, colors, symbols } from "../data";
 import useRandomValueFromArray from "../hooks/useRandomValueFromArray";
-import { Fragment, useEffect, useState } from "react";
-import Cumulator from "./Cumulator";
+import { Fragment, useEffect } from "react";
 
-const CardsWrapper = ({ cardsNumber }) => {
+import CumulatorComponent from "./CumulatorComponent";
+import ScoreForm from "./ScoreForm";
+
+const CardsWrapper = ({
+  cardsNumber,
+  scoreArray,
+  numberOfReload,
+  setScoreSended,
+}) => {
   const cardNumbers = cardsNumber;
   const { randomValueFromArray } = useRandomValueFromArray();
-  const [scoreArray] = useState([]);
 
   useEffect(() => {
+    console.log(
+      "%cCardsWrapper mounted start",
+      "color: white;  font-weight:bold; background-color:purple;padding: 2px"
+    );
     console.log("scoreArray", scoreArray);
-  }, [scoreArray]);
+    console.log(
+      "%cCardsWrapper mounted end",
+      "color: white;  font-weight:bold; background-color:purple;padding: 2px"
+    );
+  }, [scoreArray, numberOfReload]);
 
   return (
     <>
-      <Cumulator scoreArray={scoreArray} />
-      <div className="card-wrapper">
+      <div
+        className={`card-wrapper ${
+          numberOfReload === 3 ? "scale-out-center" : ""
+        }`}
+      >
+        <CumulatorComponent scoreArray={scoreArray} />
+      </div>
+
+      <div
+        className={`modal-form ${
+          numberOfReload === 3 ? "slide-in-top " : "hidden"
+        }`}
+      >
+        <ScoreForm
+          setScoreSended={setScoreSended}
+          scoreArray={scoreArray}
+          numberOfReload={numberOfReload}
+        />
+      </div>
+      <div
+        className={`card-wrapper ${
+          numberOfReload === 3 ? "scale-out-center" : ""
+        }`}
+      >
         {[...Array(Number(cardNumbers))].map((_numb, index) => {
           index += 1;
           const randomSymbols =

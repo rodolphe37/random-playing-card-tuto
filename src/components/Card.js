@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import useCumulatorController from "../hooks/useCumulatorController";
 import BorderCardFigureConditions from "./BorderCardFigureConditions";
 import CenterCardElement from "./CenterCardElement";
 
@@ -12,20 +13,39 @@ const Card = ({
   cardsNumber,
 }) => {
   const isMounted = useRef(false);
+  const { scoreFinal, classmentFinal } = useCumulatorController({
+    scoreArray,
+  });
 
   useEffect(() => {
+    console.log(
+      "%cCard component mounted start",
+      "color: white;  font-weight:bold; background-color:black;padding: 2px"
+    );
     if (!isMounted) {
       return;
     }
     isMounted.current = true;
-    if (
-      numberArray.id === randomValueArray.id &&
-      scoreArray.length < Number(cardsNumber)
-    ) {
+    if (scoreArray.length < Number(cardsNumber)) {
       scoreArray.push(randomValueArray.score);
       isMounted.current = false;
     }
-  }, [isMounted, scoreArray, numberArray, randomValueArray, cardsNumber]);
+    console.log("scoreArray", scoreArray);
+    console.log("scoreFinal", scoreFinal);
+    console.log("classmentFinal", classmentFinal);
+    console.log(
+      "%cCard component mounted end",
+      "color: white;  font-weight:bold; background-color:black;padding: 2px"
+    );
+  }, [
+    isMounted,
+    scoreArray,
+    numberArray,
+    classmentFinal,
+    randomValueArray,
+    scoreFinal,
+    cardsNumber,
+  ]);
   return (
     <div className="card-container">
       <p
