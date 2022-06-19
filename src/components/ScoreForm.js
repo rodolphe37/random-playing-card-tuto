@@ -57,7 +57,7 @@ const ScoreForm = ({ scoreArray, setScoreSended }) => {
         window.location.reload();
       });
     } else {
-      alert("Enter your nickname & counrty please");
+      alert("Enter your nickname & country please");
     }
   };
 
