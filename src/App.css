@@ -205,7 +205,7 @@
   margin: 10px;
   transform: scale(0.89);
   filter: drop-shadow(1px 4px 7px black);
-  box-shadow: 1px 1px 1px grey inset;
+  box-shadow: 1px 1px 1px grey inset, 1px -1px 2px inset;
   border: 0.01rem solid white;
   animation: flip-vertical-fwd 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
 }

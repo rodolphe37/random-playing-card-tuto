@@ -20,12 +20,6 @@ const ModalComponent = ({ localStoreScores, openModal, setOpenModal }) => {
       setSortedArrayScore(
         arrayForSort.map((res) => res).sort(compareValues("score", "desc"))
       );
-
-      console.log(
-        "new array",
-        arrayForSort.sort(compareValues("score", "desc"))
-      );
-      console.log("local classment", localStoreScores);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [compareValues, sortedArrayScore, localStoreScores]);

@@ -16,11 +16,6 @@ const useCumulatorController = ({ scoreArray }) => {
   }, [numberOfReload, setNumberOfReload]);
 
   useEffect(() => {
-    console.log(
-      "%cCumulator hook mounted start",
-      "color: white;  font-weight:bold; background-color:orange;padding: 2px"
-    );
-
     if (cumulScore !== 0 || scoreArray.length > 0) {
       setScoreFinal(cumulScore);
     }
@@ -36,11 +31,6 @@ const useCumulatorController = ({ scoreArray }) => {
       });
     }
 
-    console.log("cumulScore from hook", cumulScore);
-    console.log(
-      "%cCumulator hook mounted end",
-      "color: black;  font-weight:bold; background-color:orange;padding: 2px"
-    );
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [scoreArray, setScoreFinal, cumulScore, setClassmentFinal]);
 

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useRecoilState } from "recoil";
 import { classmentAtom } from "../assets/statesManager/classmentAtom";
@@ -21,18 +21,6 @@ const ScoreForm = ({ scoreArray, setScoreSended }) => {
   const { country, setCountry, setDataCountryCode, dataCountryCode } =
     useFlagByCountry();
   const { classmentFinal } = useCumulatorController({ scoreArray });
-
-  useEffect(() => {
-    console.log(
-      "%cScore Component mounted start",
-      "color: white;  font-weight:bold; background-color:green;padding: 2px"
-    );
-    console.log("classment from ScoreForm", classmentFinal);
-    console.log(
-      "%cScore Component mounted end",
-      "color: white;  font-weight:bold; background-color:darkgreen;padding: 2px"
-    );
-  }, [classmentFinal]);
 
   const sendStatusToServer = async () => {
     const payload = {

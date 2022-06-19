@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useRecoilState } from "recoil";
 import { SortedArrayFromServerAtom } from "../assets/statesManager/classmentAtom";
 import CardsWrapper from "./CardsWrapper";
@@ -11,13 +10,6 @@ const CenterPageApp = ({
   numberOfReload,
 }) => {
   const [sortedArrayScore] = useRecoilState(SortedArrayFromServerAtom);
-  useEffect(() => {
-    console.log(
-      "%cclassment from center Page",
-      "font-weight: bold; color:#871F78; padding: 2px",
-      classmentFinal
-    );
-  }, [classmentFinal]);
 
   return (
     <>

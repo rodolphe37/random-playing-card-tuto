@@ -1,7 +1,7 @@
 import Card from "./Card";
 import { numbers, colors, symbols } from "../data";
 import useRandomValueFromArray from "../hooks/useRandomValueFromArray";
-import { Fragment, useEffect } from "react";
+import { Fragment } from "react";
 
 import CumulatorComponent from "./CumulatorComponent";
 import ScoreForm from "./ScoreForm";
@@ -16,18 +16,6 @@ const CardsWrapper = ({
 }) => {
   const cardNumbers = cardsNumber;
   const { randomValueFromArray } = useRandomValueFromArray();
-
-  useEffect(() => {
-    console.log(
-      "%cCardsWrapper mounted start",
-      "color: white;  font-weight:bold; background-color:purple;padding: 2px"
-    );
-    console.log("scoreArray", scoreArray);
-    console.log(
-      "%cCardsWrapper mounted end",
-      "color: white;  font-weight:bold; background-color:purple;padding: 2px"
-    );
-  }, [scoreArray, numberOfReload]);
 
   return (
     <>

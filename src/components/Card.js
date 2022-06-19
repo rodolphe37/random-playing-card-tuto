@@ -18,10 +18,6 @@ const Card = ({
   });
 
   useEffect(() => {
-    console.log(
-      "%cCard component mounted start",
-      "color: white;  font-weight:bold; background-color:black;padding: 2px"
-    );
     if (!isMounted) {
       return;
     }
@@ -30,13 +26,6 @@ const Card = ({
       scoreArray.push(randomValueArray.score);
       isMounted.current = false;
     }
-    console.log("scoreArray", scoreArray);
-    console.log("scoreFinal", scoreFinal);
-    console.log("classmentFinal", classmentFinal);
-    console.log(
-      "%cCard component mounted end",
-      "color: white;  font-weight:bold; background-color:black;padding: 2px"
-    );
   }, [
     isMounted,
     scoreArray,
