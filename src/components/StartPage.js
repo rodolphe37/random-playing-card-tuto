@@ -1,8 +1,50 @@
+import { useCallback, useEffect, useState } from "react";
+import { useRecoilState } from "recoil";
 import Cards from "../assets/startPage/cards.png";
+import { globalClassmentAtom } from "../assets/statesManager/classmentAtom";
+import useFetchData from "../hooks/useFetchData";
+import GlobalClassmentComponent from "./GlobalClassmentComponent";
 
 const StartPage = ({ setStartGame }) => {
+  const { getData } = useFetchData();
+  const [globalClassment] = useRecoilState(globalClassmentAtom);
+  const [localStoreScores, setLocalStoreScores] = useState([]);
+
+  const getAllScores = useCallback(async () => {
+    await getData();
+  }, [getData]);
+
+  useEffect(() => {
+    const controller = new AbortController();
+    const signal = controller.signal;
+    if (globalClassment.length === 0) {
+      getAllScores(signal);
+    }
+    if (globalClassment.length !== localStoreScores.length) {
+      const newArrayOfScore = globalClassment.map((res) => res.scoresList)[0];
+      setLocalStoreScores(newArrayOfScore);
+    }
+
+    return () => {
+      controller.abort(signal);
+    };
+  }, [globalClassment, getAllScores, localStoreScores]);
   return (
     <div className="start-page__container">
+      <div className="buttons-container">
+        <div className="start-page__footer">
+          <button onClick={setStartGame}>StartGame</button>
+        </div>
+        {globalClassment.length > 0 ? (
+          <GlobalClassmentComponent
+            localStoreScores={localStoreScores}
+            globalClassment={globalClassment}
+          />
+        ) : (
+          ""
+        )}
+        <div />
+      </div>
       <img src={Cards} alt="cards" width={250} />
       <div className="start-page__header">
         <h1>Are you the luckiest person alive? </h1>
@@ -28,10 +70,6 @@ const StartPage = ({ setStartGame }) => {
           </ul>
         </div>
       </div>
-      <div className="start-page__footer">
-        <button onClick={setStartGame}>StartGame</button>
-      </div>
-      <div />
     </div>
   );
 };

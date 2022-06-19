@@ -15,3 +15,8 @@ export const numberOfReloadAtom = atom({
   key: "numberOfReloadAtom",
   default: sessionStorage.getItem("reload") || 0,
 });
+
+export const globalClassmentAtom = atom({
+  key: "globalClassmentAtom",
+  default: [],
+});
