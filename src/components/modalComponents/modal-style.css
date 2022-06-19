@@ -88,7 +88,7 @@
     top: 1vh;
   }
   .global-classment__container {
-    transform: scale(0.78) translate(0, -20rem);
+    transform: scale(0.78) translate(0, -6rem);
   }
 }
 
@@ -120,7 +120,7 @@
 .headerModal {
   background-color: #c9c9ff;
   font-size: 25px;
-  color: white;
+  color: purple;
   display: flex;
   align-items: center;
   justify-content: space-between;

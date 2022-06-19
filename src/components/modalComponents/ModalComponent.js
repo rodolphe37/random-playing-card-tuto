@@ -45,7 +45,10 @@ const ModalComponent = ({ localStoreScores, openModal, setOpenModal }) => {
                   <h2
                     style={{ fontSize: 20, textAlign: "center", marginTop: 5 }}
                   >
-                    Global scores classment ({localStoreScores.length} players)
+                    Global scores classment{" "}
+                    <span style={{ fontSize: 12 }}>
+                      ({localStoreScores.length} players)
+                    </span>
                   </h2>
                 </header>
                 <div className="containerModal">
@@ -121,7 +124,7 @@ const ModalComponent = ({ localStoreScores, openModal, setOpenModal }) => {
                                                                 <p
                                                                   style={{
                                                                     color:
-                                                                      "#fff",
+                                                                      "purple",
                                                                     fontWeight:
                                                                       "bold",
                                                                   }}
@@ -193,7 +196,7 @@ const ModalComponent = ({ localStoreScores, openModal, setOpenModal }) => {
                                                           <p>
                                                             {res.country.substring(
                                                               0,
-                                                              25
+                                                              18
                                                             ) + ""}
                                                           </p>
                                                           <span className="flag-icon">
