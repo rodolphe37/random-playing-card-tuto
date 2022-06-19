@@ -41,8 +41,58 @@
   justify-content: space-around;
   color: white;
 }
+.buttons-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+}
 .start-page__container img {
   filter: drop-shadow(2px 4px 6px grey);
+}
+.global-classment__inner {
+  width: 93%;
+  display: flex;
+  margin: 1rem;
+}
+.global-classment__inner li {
+  display: grid;
+  align-items: center;
+  width: 94%;
+  gap: 2rem;
+  border: 1px dotted black;
+  margin: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+.numerSection {
+  margin-left: 1rem;
+  position: relative;
+}
+.numerSection p {
+  position: absolute;
+  top: 12px;
+  left: 15px;
+}
+.country-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0.4rem 0 0 0;
+}
+.country-section p {
+  font-size: 11px;
+}
+.country-section .flag-icon span {
+  transform: scale(1.5) !important;
+}
+.name-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0.4rem 0 0 0.4rem;
 }
 .start-page__center {
   display: flex;
@@ -60,7 +110,6 @@
 }
 .rule-list {
   max-width: 60%;
-
   line-height: 1.3rem;
 }
 .rules__container {
@@ -362,8 +411,7 @@ select {
 
 /* ANIMATIONS */
 .scale-out-center {
-  animation: scale-out-center 0.7s 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53)
-    both;
+  animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 .scale-in-center {
   animation: scale-in-center 0.7s 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;

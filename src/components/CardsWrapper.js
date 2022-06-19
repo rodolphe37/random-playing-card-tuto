@@ -11,6 +11,7 @@ const CardsWrapper = ({
   scoreArray,
   numberOfReload,
   setScoreSended,
+  sortedArrayScore,
 }) => {
   const cardNumbers = cardsNumber;
   const { randomValueFromArray } = useRandomValueFromArray();
@@ -43,6 +44,7 @@ const CardsWrapper = ({
         }`}
       >
         <ScoreForm
+          sortedArrayScore={sortedArrayScore}
           setScoreSended={setScoreSended}
           scoreArray={scoreArray}
           numberOfReload={numberOfReload}

@@ -1,9 +1,11 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useRecoilState } from "recoil";
 import { classmentAtom } from "../assets/statesManager/classmentAtom";
 import useCumulatorController from "../hooks/useCumulatorController";
 import useFlagByCountry from "../hooks/useFlagByCountry";
+import { BASE_URL } from "../utils/fetchUrls";
 import SelectCountry from "./SelectCountry";
 
 const ScoreForm = ({ scoreArray, setScoreSended }) => {
@@ -28,15 +30,31 @@ const ScoreForm = ({ scoreArray, setScoreSended }) => {
     );
   }, [classmentFinal]);
 
-  const handleReloadGame = () => {
-    setScoreSended(true);
-    setClassmentFromState({ pts: 0, name: "" });
-    alert(
-      `Your NickName is :${name}, Your Country is: ${country}, and your score is:${classmentFinal.pts}pts`
-    );
-    sessionStorage.clear();
-    navigate("/");
-    window.location.reload();
+  const sendStatusToServer = async () => {
+    const payload = {
+      status: "published",
+      name: name,
+      country: country,
+      score: classmentFinal.pts,
+      flagCode: dataCountryCode,
+    };
+    await axios.post(`${BASE_URL}/classment/`, payload).then(() => {
+      try {
+        setClassmentFromState({ pts: 0, name: "" });
+        sessionStorage.clear();
+        setScoreSended(true);
+        console.log("SUCCES");
+      } catch (error) {
+        console.error("not sended", error);
+      }
+    });
+  };
+
+  const handleReloadGame = async () => {
+    await sendStatusToServer().then(() => {
+      navigate("/");
+      window.location.reload();
+    });
   };
 
   return (
