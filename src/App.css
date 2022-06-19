@@ -547,4 +547,30 @@ select {
   .rules__container {
     width: 87% !important;
   }
+  .center-symbol-sigle {
+    font-size: 3rem !important;
+  }
+  .grid-7 .centerCard:last-child {
+    transform: translate(5.3rem, -3rem) !important;
+  }
+  .grid-5 .centerCard:last-child {
+    transform: translate(5.5rem, 0) !important;
+  }
+  .grid-9,
+  .grid-8 {
+    transform: scale(0.9) translate(0, 0rem) !important;
+  }
+  .grid-10 {
+    transform: scale(0.9) translate(0, 0rem) !important;
+    grid-column-gap: 43px !important;
+  }
+  .grid-10 .centerCard:nth-child(9) {
+    transform: translate(5.5rem, 4rem) !important;
+  }
+  .grid-10 .centerCard:last-child {
+    transform: translate(5.5rem, -3rem) !important;
+  }
+  .grid-6 {
+    transform: translate(0, 0rem) !important;
+  }
 }
