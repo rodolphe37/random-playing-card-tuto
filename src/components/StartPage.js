@@ -45,7 +45,6 @@ const StartPage = ({ setStartGame }) => {
 
   return (
     <div className="start-page__container">
-      {winnerOfMoment ? <FirstOfList winnerOfMoment={winnerOfMoment} /> : ""}
       <div className="buttons-container">
         <div className="start-page__footer">
           <button
@@ -76,7 +75,7 @@ const StartPage = ({ setStartGame }) => {
       <div className="start-page__header">
         <h1>Are you the luckiest person alive? </h1>
       </div>
-
+      {winnerOfMoment ? <FirstOfList winnerOfMoment={winnerOfMoment} /> : ""}
       <div className="start-page__center">
         <div className="header-rule__container">
           <h4>Try and see the ranking of the luckiest...</h4>

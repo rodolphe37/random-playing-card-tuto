@@ -9,7 +9,8 @@ const FirstOfList = ({ winnerOfMoment }) => {
       title="The first of the moment!"
       className="first-of-classment-list__container"
     >
-      <ol className="global-classment__inner custom-counter">
+      <ol className="global-classment__inner custom-counter startPageWinner">
+        <h4>The winner of moment!</h4>
         <li>
           <div className="numerSection">
             <div className="numerSection">

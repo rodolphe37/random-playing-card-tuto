@@ -54,6 +54,7 @@
   justify-content: center;
   width: 100%;
   gap: 1rem;
+  margin-top: 2rem;
 }
 .start-page__container img {
   filter: drop-shadow(2px 4px 6px grey);
@@ -119,7 +120,15 @@
   border-radius: 8px;
   border: 1px solid white;
 }
-
+.startPageWinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.startPageWinner h4 {
+  color: white;
+}
 .custom-counter {
   transform: scale(1) !important;
 }
@@ -142,6 +151,12 @@
   max-width: 100%;
   line-height: 1.3rem;
   list-style: none;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 1rem;
+  border-radius: 7px;
+  margin-top: 1rem;
+  background: whitesmoke;
+  color: black;
 }
 .rules__container {
   display: flex;
@@ -575,17 +590,35 @@ select {
   }
   .buttons-container button {
     width: 33vw !important;
+    padding-bottom: 1rem;
   }
   .start-button img,
   .classment-button a img {
     transform: scale(0.7);
   }
+  .start-page__container button a {
+    margin-top: -0.55rem;
+  }
   .start-button span,
   .classment-button a {
     font-size: 0.7rem;
+    flex-direction: column !important;
+  }
+  .start-page__center {
+    max-width: 100%;
+  }
+  .start-page__footer button,
+  .classment-button a {
+    padding-bottom: 1rem;
+  }
+  .start-button,
+  .classment-button a {
+    flex-direction: column;
   }
   .card-start-page {
     transform: scale(0.5) !important;
+    padding: 0;
+    margin: 0;
   }
   .header-rule__container h4 {
     margin-left: 2rem;
@@ -593,6 +626,7 @@ select {
   .App-header h1,
   .start-page__header h1 {
     font-size: 1rem;
+    text-align: center;
   }
   .rules__container {
     width: 87% !important;
